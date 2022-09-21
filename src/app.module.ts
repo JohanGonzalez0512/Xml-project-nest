@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -32,7 +33,10 @@ import { AppService } from './app.service';
 
     ServeStaticModule.forRoot({
       rootPath: join(__dirname,'..','public'),
-      })
+      }),
+
+
+    UsersModule
      
   ],
   controllers: [AppController],
