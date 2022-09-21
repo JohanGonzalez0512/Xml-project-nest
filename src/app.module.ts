@@ -9,10 +9,7 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
-
-
     ConfigModule.forRoot(),
-
     TypeOrmModule.forRoot({
       ssl: process.env.STAGE === 'prod',
       extra: {
