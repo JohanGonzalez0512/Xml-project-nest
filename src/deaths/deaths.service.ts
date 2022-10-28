@@ -20,6 +20,11 @@ export class DeathsService {
     return this.deathsRepository.find({
       take: limit,
       skip: offset,
+      where: [
+        { indicator: 'Suicides registered' },
+        { indicator: 'General deaths' },
+        { indicator: 'Deaths from external causes' },
+      ]
     });
   }
 
