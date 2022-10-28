@@ -21,9 +21,10 @@ export class DeathsService {
       take: limit,
       skip: offset,
       where: [
-        { indicator: 'Suicides registered' },
+        { indicator: 'Suicides registered.' },
         { indicator: 'General deaths' },
-        { indicator: 'Deaths from external causes' },
+        { indicator: 'Deaths by homicide' },
+        { indicator: 'Deaths of infants younger than one year' },
       ]
     });
   }
