@@ -1,7 +1,6 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body} from '@nestjs/common';
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
 import { Response } from '@nestjs/common/decorators';
 
 @Controller('users')
@@ -16,9 +15,7 @@ export class UsersController {
   @Get()
   findAllXML(@Response() res) {
     res.set('Content-Type', 'text/xml');
-    return this.usersService.findAll(res);
-
-      
+    return this.usersService.findAll(res);      
   }
 
 }

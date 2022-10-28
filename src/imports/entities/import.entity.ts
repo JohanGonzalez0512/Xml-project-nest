@@ -7,6 +7,7 @@ export class Import {
 
     @Column()
     month: string;
+    
     @Column()
     year: string;
 

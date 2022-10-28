@@ -6,6 +6,8 @@ import { join } from 'path';
 
 import { UsersModule } from './users/users.module';
 import { ImportsModule } from './imports/imports.module';
+import { DeathsModule } from './deaths/deaths.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -36,7 +38,13 @@ import { ImportsModule } from './imports/imports.module';
     UsersModule,
 
 
-    ImportsModule
+    ImportsModule,
+
+
+    DeathsModule,
+
+
+    CommonModule
      
   ],
 })
